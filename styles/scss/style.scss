@@ -1,0 +1,12 @@
+// Notes:
+// 1- order of import is important
+//    sub-files will be concatenated in the border
+//    they are imported
+// 2- inline comments are not be propagated to css
+
+/* reset default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
