@@ -1,27 +1,3 @@
-@charset "UTF-8";
-/* reset default styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/*
-using flexbox to solve page layout issues
-
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples
-
-The main idea behind the flex layout is to give the
-container the ability to alter its items’ width/height
-(and order) to best fill the available space (mostly to accommodate
-to all kind of display devices and screen sizes).
-A flex container expands items to fill available free space or
-shrinks them to prevent overflow.
-
-Note: Flexbox layout is most appropriate to the components
-of an application, and small-scale layouts, while the Grid
-layout is intended for larger scale layouts.
-*/
 /* _layout_classic.scss */
 /* classic layout has:
   header,
@@ -30,6 +6,7 @@ layout is intended for larger scale layouts.
   main; this is main content area
   footer
 */
+
 .wrapper {
   display: flex;
   flex-flow: row wrap;
@@ -70,12 +47,11 @@ layout is intended for larger scale layouts.
 4- aside 2
 5- footer
 */
+
 /* medium size screen */
 @media all and (min-width: 600px) {
   /* tell both sides to share a row */
-  .aside {
-    flex: 1 0 0;
-  }
+  .aside { flex: 1 0 0; }
 }
 
 @media all and (min-width: 800px) {
@@ -83,21 +59,11 @@ layout is intended for larger scale layouts.
      And tell the main element to take twice as much
      width as the other two sidebars
   */
-  .main {
-    flex: 3 0px;
-  }
-  .aside-1 {
-    order: 1;
-  }
-  .main {
-    order: 2;
-  }
-  .aside-2 {
-    order: 3;
-  }
-  .footer {
-    order: 4;
-  }
+ .main { flex: 3 0px; }
+ .aside-1 { order: 1; }
+ .main    { order: 2; }
+ .aside-2 { order: 3; }
+ .footer  { order: 4; }
 }
 
 body {
