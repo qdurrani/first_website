@@ -9,22 +9,24 @@
 
 body {
   padding: 1em;
+  background-color: none;
 }
 
 //container for the entire page
 .wrapper {
-  //this is a flexbox
+  //define flex container
   display: flex;
 
   //orient this elements
-  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
 
   //margin/border/padding properties
   border: 1pt hidden grey;
   padding: 10px;
 
   //background
-  background-color: rgb(250, 250, 250);
+  background-color: none;
 
   //text properties
   font-style: normal;
@@ -52,15 +54,15 @@ body {
 
 .main {
   text-align: left;
-  background: deepskyblue;
+  background: none;
 }
 
 .aside-1 {
-  background: gold;
+  background: none;
 }
 
 .aside-2 {
-  background: hotpink;
+  background: none;
 }
 
 /* rely on source order for mobile-first approach
@@ -82,7 +84,7 @@ body {
      And tell the main element to take twice as much
      width as the other two sidebars
   */
- .main { flex: 3 0px; }
+ .main { flex: 4 0px; }
  .aside-1 { order: 1; }
  .main    { order: 2; }
  .aside-2 { order: 3; }

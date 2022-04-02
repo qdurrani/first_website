@@ -32,14 +32,16 @@ layout is intended for larger scale layouts.
 */
 body {
   padding: 1em;
+  background-color: none;
 }
 
 .wrapper {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   border: 1pt hidden grey;
   padding: 10px;
-  background-color: #fafafa;
+  background-color: none;
   font-style: normal;
   font-size: medium;
   font-weight: normal;
@@ -64,15 +66,15 @@ body {
 
 .main {
   text-align: left;
-  background: deepskyblue;
+  background: none;
 }
 
 .aside-1 {
-  background: gold;
+  background: none;
 }
 
 .aside-2 {
-  background: hotpink;
+  background: none;
 }
 
 /* rely on source order for mobile-first approach
@@ -96,7 +98,7 @@ body {
      width as the other two sidebars
   */
   .main {
-    flex: 3 0px;
+    flex: 4 0px;
   }
   .aside-1 {
     order: 1;
