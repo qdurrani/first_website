@@ -30,9 +30,20 @@ layout is intended for larger scale layouts.
   main; this is main content area
   footer
 */
+body {
+  padding: 1em;
+}
+
 .wrapper {
   display: flex;
   flex-flow: row wrap;
+  border: 1pt hidden grey;
+  padding: 10px;
+  background-color: #fafafa;
+  font-style: normal;
+  font-size: medium;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
@@ -43,11 +54,12 @@ layout is intended for larger scale layouts.
 }
 
 .header {
-  background: tomato;
+  background: none;
 }
 
 .footer {
-  background: lightgreen;
+  background: none;
+  border-top: 1pt dashed grey;
 }
 
 .main {
@@ -98,8 +110,4 @@ layout is intended for larger scale layouts.
   .footer {
     order: 4;
   }
-}
-
-body {
-  padding: 2em;
 }
