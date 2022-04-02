@@ -79,6 +79,7 @@ body {
   .aside { flex: 1 0 0; }
 }
 
+/* large size screen */
 @media all and (min-width: 800px) {
   /* invert order of first sidebar and main
      And tell the main element to take twice as much
