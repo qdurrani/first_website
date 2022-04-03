@@ -1,0 +1,32 @@
+/* _navigation_horizental.scss */
+/* create a horizental navigation bar that will change based on screen size */
+
+/* large screen */
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+
+  /* this aligns items to the end of the line on main-axis */
+  justify-content: flex-end;
+
+  list-style: none;
+  margin: 0;
+  background: deepskyblue;
+}
+
+/* medium screen */
+@media all and (max-width: 800px) {
+  .navigation {
+    /* when on medium size screens, we center it by
+    evenly distrubuting empty space around items */
+    justify-content: space-around;
+  }
+}
+
+/* small screen */
+@media all and (max-width: 500px) {
+  .navigation {
+    /* on small size screens, we use column for direction */
+    flex-direction: column;
+  }
+}

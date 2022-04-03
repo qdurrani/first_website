@@ -1,0 +1,31 @@
+// Notes:
+// 1- order of import is important
+//    sub-files will be concatenated in the border
+//    they are imported
+// 2- inline comments are not be propagated to css
+
+/* reset default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+using flexbox to solve page layout issues
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples
+
+The main idea behind the flex layout is to give the
+container the ability to alter its items’ width/height
+(and order) to best fill the available space (mostly to accommodate
+to all kind of display devices and screen sizes).
+A flex container expands items to fill available free space or
+shrinks them to prevent overflow.
+
+Note: Flexbox layout is most appropriate to the components
+of an application, and small-scale layouts, while the Grid
+layout is intended for larger scale layouts.
+*/
+
+@import '_layout_classic'

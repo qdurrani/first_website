@@ -1,0 +1,107 @@
+/* _layout_classic.scss */
+/* classic layout has:
+  header,
+  aside1; side bar
+  aside2; side bar
+  main; this is main content area
+  footer
+*/
+
+body {
+  padding: 1em;
+  background-color: none;
+}
+
+//container for the entire page
+.wrapper {
+  //define flex container
+  display: flex;
+
+  //orient this elements
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  //margin/border/padding properties
+  border: 1pt hidden grey;
+  padding: 10px;
+
+  //background
+  background-color: none;
+
+  //text properties
+  font-style: normal;
+  font-size: large;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+
+  text-align: center;
+}
+
+/* tell all items to be 100% width, via flex-basis */
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+  background: none;
+  .heading {
+    text-shadow: 4px 4px 5px grey;
+  }
+}
+
+.footer {
+  background: none;
+  border-top: 1pt dashed grey;
+
+  font-size: small;
+}
+
+.main {
+  background: none;
+
+  text-align: left;
+  word-spacing: 2px;
+  line-height: 1.5;
+}
+
+.aside-1 {
+  background: none;
+
+  .unordered_list {
+    text-align: left;
+    list-style: none;
+    line-height: 1.5;
+  }
+}
+
+.aside-2 {
+  background: none;
+}
+
+/* rely on source order for mobile-first approach
+1- header
+2- main
+3- aside 1
+4- aside 2
+5- footer
+*/
+
+/* medium size screen */
+@media all and (min-width: 600px) {
+  /* tell both sides to share a row */
+  .aside { flex: 1 0 0; }
+}
+
+/* large size screen */
+@media all and (min-width: 800px) {
+  /* invert order of first sidebar and main
+     And tell the main element to take twice as much
+     width as the other two sidebars
+  */
+ .main { flex: 4 0px; }
+ .aside-1 { order: 1; }
+ .main    { order: 2; }
+ .aside-2 { order: 3; }
+ .footer  { order: 4; }
+}
