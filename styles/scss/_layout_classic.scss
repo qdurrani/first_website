@@ -30,7 +30,7 @@ body {
 
   //text properties
   font-style: normal;
-  font-size: medium;
+  font-size: large;
   font-weight: normal;
   font-family: Arial, Helvetica, sans-serif;
 
@@ -45,20 +45,34 @@ body {
 
 .header {
   background: none;
+  .heading {
+    text-shadow: 4px 4px 5px grey;
+  }
 }
 
 .footer {
   background: none;
   border-top: 1pt dashed grey;
+
+  font-size: small;
 }
 
 .main {
-  text-align: left;
   background: none;
+
+  text-align: left;
+  word-spacing: 2px;
+  line-height: 1.5;
 }
 
 .aside-1 {
   background: none;
+
+  .unordered_list {
+    text-align: left;
+    list-style: none;
+    line-height: 1.5;
+  }
 }
 
 .aside-2 {
