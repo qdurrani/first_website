@@ -1,31 +1,6 @@
-h1 {
-	color: red;
-	width: 500px;
-	border: 1px solid black;
-	padding: 0 20px 20px 20px;
-	background-color: yellow;
-
-	font-size: 60px;
-	text-align: center;
-
-	text-shadow: 3px 3px 1px black;
-}
-
-p, li {
-	font-size: 16px;
-	line-height: 2;
-	letter-spacing: 1px;
-}
-
-li {
-	color: grey;
-}
-
-a:hover {
-	background-color: yellow;
-}
-
-img {
-	display: block;
-	margin: 0, auto;
+#mainContainer {
+    background-image: url('../images/funTime2.jpg');
+    width: auto;
+    height: auto;
+    background-size: auto;
 }
